@@ -7,6 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class Alert {
+  static AlertPosition defaultPosition = AlertPosition.top;
+
   static Widget deploy() {
     return UncontrolledProviderScope(
       container: AlertStates.container,
@@ -16,60 +18,60 @@ class Alert {
 
   static Future<void> success(
     String msg, {
-    AlertPosition position = AlertPosition.top,
     bool noDuplicate = true,
+    AlertPosition? position,
   }) async {
     final id = DateTime.now().millisecondsSinceEpoch;
     return await AlertStates.show(
       id: id,
       message: msg,
       notifyStatus: AlertNotifyStatus.success,
-      position: position,
+      position: position ?? defaultPosition,
       noDuplicate: noDuplicate,
     );
   }
 
   static Future<void> warning(
     String msg, {
-    AlertPosition position = AlertPosition.top,
     bool noDuplicate = true,
+    AlertPosition? position,
   }) async {
     final id = DateTime.now().millisecondsSinceEpoch;
     return await AlertStates.show(
       id: id,
       message: msg,
       notifyStatus: AlertNotifyStatus.warning,
-      position: position,
+      position: position ?? defaultPosition,
       noDuplicate: noDuplicate,
     );
   }
 
   static Future<void> error(
     String msg, {
-    AlertPosition position = AlertPosition.top,
     bool noDuplicate = true,
+    AlertPosition? position,
   }) async {
     final id = DateTime.now().millisecondsSinceEpoch;
     return await AlertStates.show(
       id: id,
       message: msg,
       notifyStatus: AlertNotifyStatus.error,
-      position: position,
+      position: position ?? defaultPosition,
       noDuplicate: noDuplicate,
     );
   }
 
   static Future<void> info(
     String msg, {
-    AlertPosition position = AlertPosition.top,
     bool noDuplicate = true,
+    AlertPosition? position,
   }) async {
     final id = DateTime.now().millisecondsSinceEpoch;
     return await AlertStates.show(
       id: id,
       message: msg,
       notifyStatus: AlertNotifyStatus.info,
-      position: position,
+      position: position ?? defaultPosition,
       noDuplicate: noDuplicate,
     );
   }
