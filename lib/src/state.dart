@@ -21,8 +21,7 @@ class AlertStates {
     final c = AlertStates.container.read(AlertStates.items);
 
     if (noDuplicate) {
-      final containMessage =
-          c.firstWhereOrNull((e) => e.message == message) != null;
+      final containMessage = c.firstWhereOrNull((e) => e.message == message) != null;
       if (containMessage) return;
     }
 
