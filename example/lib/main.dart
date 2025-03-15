@@ -7,7 +7,10 @@ void main() {
     MaterialApp(
       home: MainApp(),
       builder: (context, child) {
-        return Stack(children: [child!, Alert.deploy()]);
+        return Stack(children: [
+          child!,
+          Alert.deploy(),
+        ]);
       },
     ),
   );
