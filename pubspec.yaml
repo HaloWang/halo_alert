@@ -1,0 +1,24 @@
+name: halo_alert
+description: 'Simple alert dialog for flutter'
+version: 0.1.0
+homepage:
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+  flutter: '>=1.17.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  collection:
+  flutter_riverpod:
+  halo:
+  riverpod:
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
