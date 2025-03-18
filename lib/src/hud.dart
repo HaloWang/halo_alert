@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_interpolation_to_compose_strings
 
+import 'package:halo_alert/halo_alert.dart';
 import 'package:halo_alert/src/state.dart';
 import 'package:halo_alert/src/types.dart';
 import 'package:flutter/material.dart';
@@ -73,8 +74,8 @@ class HUD extends ConsumerWidget {
             key: key,
             duration: duration,
             curve: item.displayStatus == AlertDisplayStatus.show ? Curves.easeOutBack : Curves.easeInBack,
-            top: top,
-            bottom: bottom,
+            top: top != null ? top + Alert.topAdjustment + Alert.centerAdjustment : null,
+            bottom: bottom != null ? bottom + Alert.bottomAdjustment : null,
             height: screenHeight,
             width: screenWidth,
             child: AO(

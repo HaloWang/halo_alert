@@ -6,8 +6,11 @@ import 'package:halo_alert/src/types.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class Alert {
+abstract final class Alert {
   static AlertPosition defaultPosition = AlertPosition.top;
+  static double topAdjustment = 0.0;
+  static double centerAdjustment = 0.0;
+  static double bottomAdjustment = 0.0;
 
   static Widget deploy() {
     return UncontrolledProviderScope(
