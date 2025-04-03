@@ -1,3 +1,7 @@
+## 0.5.0
+
+- Refactor Alert class to extend StatelessWidget and implement build method; deprecate deploy method in favor of const constructor.
+
 ## 0.4.0
 
 - Mew Api added.

@@ -6,12 +6,13 @@ import 'package:halo_alert/src/types.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-abstract final class Alert {
+class Alert extends StatelessWidget {
   static AlertPosition defaultPosition = AlertPosition.top;
   static double topAdjustment = 0.0;
   static double centerAdjustment = 0.0;
   static double bottomAdjustment = 0.0;
 
+  @Deprecated('Use `const Alert()` instead')
   static Widget deploy() {
     return UncontrolledProviderScope(
       container: AlertStates.container,
@@ -76,6 +77,16 @@ abstract final class Alert {
       notifyStatus: AlertNotifyStatus.info,
       position: position ?? defaultPosition,
       noDuplicate: noDuplicate,
+    );
+  }
+
+  const Alert({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return UncontrolledProviderScope(
+      container: AlertStates.container,
+      child: const IgnorePointer(child: HUD()),
     );
   }
 }
