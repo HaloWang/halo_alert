@@ -25,7 +25,7 @@ class Alert extends StatelessWidget {
     bool noDuplicate = true,
     AlertPosition? position,
   }) async {
-    final id = DateTime.now().millisecondsSinceEpoch;
+    final id = DateTime.now().microsecondsSinceEpoch;
     return await AlertStates.show(
       id: id,
       message: msg,
@@ -40,7 +40,7 @@ class Alert extends StatelessWidget {
     bool noDuplicate = true,
     AlertPosition? position,
   }) async {
-    final id = DateTime.now().millisecondsSinceEpoch;
+    final id = DateTime.now().microsecondsSinceEpoch;
     return await AlertStates.show(
       id: id,
       message: msg,
@@ -55,7 +55,7 @@ class Alert extends StatelessWidget {
     bool noDuplicate = true,
     AlertPosition? position,
   }) async {
-    final id = DateTime.now().millisecondsSinceEpoch;
+    final id = DateTime.now().microsecondsSinceEpoch;
     return await AlertStates.show(
       id: id,
       message: msg,
@@ -70,7 +70,7 @@ class Alert extends StatelessWidget {
     bool noDuplicate = true,
     AlertPosition? position,
   }) async {
-    final id = DateTime.now().millisecondsSinceEpoch;
+    final id = DateTime.now().microsecondsSinceEpoch;
     return await AlertStates.show(
       id: id,
       message: msg,

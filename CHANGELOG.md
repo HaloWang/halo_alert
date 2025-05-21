@@ -1,3 +1,7 @@
+## 0.5.1
+
+- Change Alert class ID generation from milliseconds to microseconds for improved uniqueness.
+
 ## 0.5.0
 
 - Refactor Alert class to extend StatelessWidget and implement build method; deprecate deploy method in favor of const constructor.

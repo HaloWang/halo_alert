@@ -1,7 +1,7 @@
 name: halo_alert
 description: 'Simple alert dialog for flutter'
-version: 0.5.0
-homepage:
+version: 0.5.1
+repository: https://github.com/HaloWang/halo_alert
 
 environment:
   sdk: '>=3.3.0 <4.0.0'
@@ -11,10 +11,10 @@ dependencies:
   flutter:
     sdk: flutter
 
-  collection:
-  flutter_riverpod:
-  halo:
-  riverpod:
+  collection: ^1.19.1
+  flutter_riverpod: ^2.6.1
+  halo: ^0.7.2
+  riverpod: ^2.6.1
 
 dev_dependencies:
   flutter_test:
