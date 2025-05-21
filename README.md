@@ -11,8 +11,8 @@ Simple alert dialog for flutter
    2. Write Unit Test if possible
 2. Update version in `pubspec.yaml`
 3. Update `CHANGELOG.md`
-4. Run `flutter pub publish`
-5. `git add .;git add .;git add .;git commit -m 'New feature'; git fetch;`
+4. `git add .;git add .;git add .;git commit -m 'New feature'; git fetch;`
+5. Run `flutter pub publish`
 
 ## How to use
 
@@ -28,4 +28,3 @@ void main() {
   );
 }
 ```
-
