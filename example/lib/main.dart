@@ -5,7 +5,7 @@ import 'package:halo_alert/halo_alert.dart';
 void main() {
   runApp(
     MaterialApp(
-      home: MainApp(),
+      home: _App(),
       builder: (context, child) {
         return Stack(children: [
           child!,
@@ -16,8 +16,8 @@ void main() {
   );
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class _App extends StatelessWidget {
+  const _App();
 
   void _showWarning() {
     final message = HF.randomBool() ? 'Warning' : HF.randomString(max: 600);
