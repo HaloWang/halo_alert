@@ -7,6 +7,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:halo/halo.dart';
 
+const _kIconHorizontalDistance = 8.0;
+const _kBorderRadius = 10.0;
+const _kDarkBorderWidth = 1.0;
+const _kLightBorderWidth = 0.0;
+
 class HUD extends ConsumerWidget {
   const HUD({super.key});
 
@@ -18,12 +23,19 @@ class HUD extends ConsumerWidget {
     final screenHeight = MediaQuery.sizeOf(context).height;
     final paddingTop = MediaQuery.paddingOf(context).top;
     final paddingBottom = MediaQuery.paddingOf(context).bottom;
-    final light = MediaQuery.platformBrightnessOf(context) == Brightness.light;
+
+    final themeMode = Alert.preferredThemeMode ?? ThemeMode.system;
 
     return Material(
       color: kC,
       child: Stack(
         children: items.indexMap((index, value) {
+          final isLight = switch (themeMode) {
+            ThemeMode.system => View.of(context).platformDispatcher.platformBrightness == Brightness.light,
+            ThemeMode.light => true,
+            ThemeMode.dark => false,
+          };
+
           final item = items[index];
           final message = item.message;
           final notifyStatus = item.status;
@@ -92,14 +104,14 @@ class HUD extends ConsumerWidget {
                         child: C(
                           padding: EI.a(12),
                           decoration: BD(
-                            color: light ? kW : kB,
+                            color: isLight ? kW : kB,
                             borderRadius: _kBorderRadius.r,
                             border: Border.all(
                               color: color.wo(0.33),
-                              width: light ? _kLightBorderWidth : _kDarkBorderWidth,
+                              width: isLight ? _kLightBorderWidth : _kDarkBorderWidth,
                             ),
                             boxShadow: [
-                              if (light)
+                              if (isLight)
                                 BoxShadow(
                                   color: kB.wo(0.4),
                                   blurRadius: 4,
@@ -114,7 +126,7 @@ class HUD extends ConsumerWidget {
                               _kIconHorizontalDistance.w,
                               ConstrainedBox(
                                 constraints: BoxConstraints(
-                                  maxWidth: screenWidth * 0.85 - 16 - _kIconHorizontalDistance - (light ? _kLightBorderWidth : _kDarkBorderWidth) * 2,
+                                  maxWidth: screenWidth * 0.85 - 16 - _kIconHorizontalDistance - (isLight ? _kLightBorderWidth : _kDarkBorderWidth) * 2,
                                 ),
                                 child: T(
                                   message.toString(),
@@ -138,8 +150,3 @@ class HUD extends ConsumerWidget {
     );
   }
 }
-
-const _kIconHorizontalDistance = 8.0;
-const _kBorderRadius = 10.0;
-const _kDarkBorderWidth = 1.0;
-const _kLightBorderWidth = 0.0;

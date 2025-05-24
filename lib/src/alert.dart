@@ -8,6 +8,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class Alert extends StatelessWidget {
   static AlertPosition defaultPosition = AlertPosition.top;
+  static ThemeMode? preferredThemeMode;
   static double topAdjustment = 0.0;
   static double centerAdjustment = 0.0;
   static double bottomAdjustment = 0.0;

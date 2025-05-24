@@ -5,6 +5,9 @@ import 'package:halo_alert/halo_alert.dart';
 void main() {
   runApp(
     MaterialApp(
+      themeMode: ThemeMode.system,
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
       home: _App(),
       builder: (context, child) {
         return Stack(children: [
