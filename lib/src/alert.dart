@@ -25,6 +25,7 @@ class Alert extends StatelessWidget {
     String msg, {
     bool noDuplicate = true,
     AlertPosition? position,
+    Color? color,
   }) async {
     final id = DateTime.now().microsecondsSinceEpoch;
     return await AlertStates.show(
@@ -33,6 +34,7 @@ class Alert extends StatelessWidget {
       notifyStatus: AlertNotifyStatus.success,
       position: position ?? defaultPosition,
       noDuplicate: noDuplicate,
+      color: color,
     );
   }
 
@@ -40,6 +42,7 @@ class Alert extends StatelessWidget {
     String msg, {
     bool noDuplicate = true,
     AlertPosition? position,
+    Color? color,
   }) async {
     final id = DateTime.now().microsecondsSinceEpoch;
     return await AlertStates.show(
@@ -48,6 +51,7 @@ class Alert extends StatelessWidget {
       notifyStatus: AlertNotifyStatus.warning,
       position: position ?? defaultPosition,
       noDuplicate: noDuplicate,
+      color: color,
     );
   }
 
@@ -55,6 +59,7 @@ class Alert extends StatelessWidget {
     String msg, {
     bool noDuplicate = true,
     AlertPosition? position,
+    Color? color,
   }) async {
     final id = DateTime.now().microsecondsSinceEpoch;
     return await AlertStates.show(
@@ -63,6 +68,7 @@ class Alert extends StatelessWidget {
       notifyStatus: AlertNotifyStatus.error,
       position: position ?? defaultPosition,
       noDuplicate: noDuplicate,
+      color: color,
     );
   }
 
@@ -70,6 +76,7 @@ class Alert extends StatelessWidget {
     String msg, {
     bool noDuplicate = true,
     AlertPosition? position,
+    Color? color,
   }) async {
     final id = DateTime.now().microsecondsSinceEpoch;
     return await AlertStates.show(
@@ -78,6 +85,7 @@ class Alert extends StatelessWidget {
       notifyStatus: AlertNotifyStatus.info,
       position: position ?? defaultPosition,
       noDuplicate: noDuplicate,
+      color: color,
     );
   }
 

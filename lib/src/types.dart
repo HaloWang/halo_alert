@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/foundation.dart';
 
 enum AlertNotifyStatus {
@@ -26,6 +28,7 @@ final class AlertItem {
   final AlertNotifyStatus status;
   final AlertDisplayStatus displayStatus;
   final AlertPosition position;
+  final Color? color;
 
   const AlertItem({
     required this.id,
@@ -33,6 +36,7 @@ final class AlertItem {
     required this.status,
     required this.displayStatus,
     required this.position,
+    this.color,
   });
 
   AlertItem copyWith({
@@ -41,6 +45,7 @@ final class AlertItem {
     AlertNotifyStatus? status,
     AlertDisplayStatus? displayStatus,
     AlertPosition? position,
+    Color? color,
   }) =>
       AlertItem(
         id: id ?? this.id,
@@ -48,5 +53,6 @@ final class AlertItem {
         status: status ?? this.status,
         displayStatus: displayStatus ?? this.displayStatus,
         position: position ?? this.position,
+        color: color ?? this.color,
       );
 }

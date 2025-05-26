@@ -44,19 +44,19 @@ class HUD extends ConsumerWidget {
 
           switch (notifyStatus) {
             case AlertNotifyStatus.warning:
-              color = Colors.yellow[800]!;
+              color = item.color ?? Colors.yellow[800]!;
               iconData = Icons.info_outline_rounded;
               break;
             case AlertNotifyStatus.error:
-              color = kCR;
+              color = item.color ?? kCR;
               iconData = Icons.error_outline;
               break;
             case AlertNotifyStatus.success:
-              color = kCG;
+              color = item.color ?? kCG;
               iconData = Icons.check_circle_outline_rounded;
               break;
             case AlertNotifyStatus.info:
-              color = kCB;
+              color = item.color ?? kCB;
               iconData = Icons.info_outline_rounded;
               break;
           }

@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'dart:ui';
 
 import 'package:collection/collection.dart';
 import 'package:halo/halo.dart';
@@ -16,6 +17,7 @@ class AlertStates {
     required AlertNotifyStatus notifyStatus,
     AlertPosition position = AlertPosition.top,
     bool noDuplicate = true,
+    Color? color,
   }) async {
     //  添加
     final c = AlertStates.container.read(AlertStates.items);
