@@ -8,11 +8,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class Alert extends StatelessWidget {
   static AlertPosition defaultPosition = AlertPosition.top;
-  static Color? defaultColor;
-  static Color? defaultSuccessColor;
-  static Color? defaultWarningColor;
-  static Color? defaultErrorColor;
-  static Color? defaultInfoColor;
+
+  static Color? get defaultColor => null;
+  static Color? get defaultSuccessColor => null;
+  static Color? get defaultWarningColor => null;
+  static Color? get defaultErrorColor => null;
+  static Color? get defaultInfoColor => null;
+
   static ThemeMode? preferredThemeMode;
   static double topAdjustment = 0.0;
   static double centerAdjustment = 0.0;

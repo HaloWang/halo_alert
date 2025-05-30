@@ -1,6 +1,6 @@
 name: halo_alert
 description: 'Simple alert dialog for flutter'
-version: 0.8.0
+version: 0.8.1
 repository: https://github.com/HaloWang/halo_alert
 
 environment:
