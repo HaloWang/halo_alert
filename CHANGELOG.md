@@ -1,3 +1,7 @@
+## 0.8.0
+
+- Add default color properties to Alert class.
+
 ## 0.7.0
 
 - 为 Alert 类的多个方法添加 color 参数，以支持自定义颜色设置。
