@@ -8,6 +8,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class Alert extends StatelessWidget {
   static AlertPosition defaultPosition = AlertPosition.top;
+  static Color? defaultColor;
+  static Color? defaultSuccessColor;
+  static Color? defaultWarningColor;
+  static Color? defaultErrorColor;
+  static Color? defaultInfoColor;
   static ThemeMode? preferredThemeMode;
   static double topAdjustment = 0.0;
   static double centerAdjustment = 0.0;
@@ -34,7 +39,7 @@ class Alert extends StatelessWidget {
       notifyStatus: AlertNotifyStatus.success,
       position: position ?? defaultPosition,
       noDuplicate: noDuplicate,
-      color: color,
+      color: color ?? defaultSuccessColor ?? defaultColor,
     );
   }
 
@@ -51,7 +56,7 @@ class Alert extends StatelessWidget {
       notifyStatus: AlertNotifyStatus.warning,
       position: position ?? defaultPosition,
       noDuplicate: noDuplicate,
-      color: color,
+      color: color ?? defaultWarningColor ?? defaultColor,
     );
   }
 
@@ -68,7 +73,7 @@ class Alert extends StatelessWidget {
       notifyStatus: AlertNotifyStatus.error,
       position: position ?? defaultPosition,
       noDuplicate: noDuplicate,
-      color: color,
+      color: color ?? defaultErrorColor ?? defaultColor,
     );
   }
 
@@ -85,7 +90,7 @@ class Alert extends StatelessWidget {
       notifyStatus: AlertNotifyStatus.info,
       position: position ?? defaultPosition,
       noDuplicate: noDuplicate,
-      color: color,
+      color: color ?? defaultInfoColor ?? defaultColor,
     );
   }
 
