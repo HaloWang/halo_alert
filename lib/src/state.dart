@@ -35,6 +35,7 @@ class AlertStates {
         status: notifyStatus,
         displayStatus: AlertDisplayStatus.deploy,
         position: position,
+        color: color,
       )
     ];
     AlertStates.container.read(AlertStates.items.notifier).state = nC1;
@@ -49,6 +50,7 @@ class AlertStates {
       status: notifyStatus,
       displayStatus: AlertDisplayStatus.show,
       position: position,
+      color: color,
     );
     final nC2 = [...c1];
     nC2.sort((l, r) => l.id - r.id);
@@ -64,6 +66,7 @@ class AlertStates {
       status: notifyStatus,
       displayStatus: AlertDisplayStatus.hide,
       position: position,
+      color: color,
     );
     final nC3 = [...c2];
     nC3.sort((l, r) => l.id - r.id);

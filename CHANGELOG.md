@@ -1,4 +1,4 @@
-## 0.8.2
+## 0.8.3
 
 - Add default color properties to Alert class.
 
