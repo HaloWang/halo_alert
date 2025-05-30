@@ -9,11 +9,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 class Alert extends StatelessWidget {
   static AlertPosition defaultPosition = AlertPosition.top;
 
-  static Color? get defaultColor => null;
-  static Color? get defaultSuccessColor => null;
-  static Color? get defaultWarningColor => null;
-  static Color? get defaultErrorColor => null;
-  static Color? get defaultInfoColor => null;
+  static Color? Function()? defaultColor;
+  static Color? Function()? defaultSuccessColor;
+  static Color? Function()? defaultWarningColor;
+  static Color? Function()? defaultErrorColor;
+  static Color? Function()? defaultInfoColor;
 
   static ThemeMode? preferredThemeMode;
   static double topAdjustment = 0.0;
@@ -41,7 +41,7 @@ class Alert extends StatelessWidget {
       notifyStatus: AlertNotifyStatus.success,
       position: position ?? defaultPosition,
       noDuplicate: noDuplicate,
-      color: color ?? defaultSuccessColor ?? defaultColor,
+      color: color ?? defaultSuccessColor?.call() ?? defaultColor?.call(),
     );
   }
 
@@ -58,7 +58,7 @@ class Alert extends StatelessWidget {
       notifyStatus: AlertNotifyStatus.warning,
       position: position ?? defaultPosition,
       noDuplicate: noDuplicate,
-      color: color ?? defaultWarningColor ?? defaultColor,
+      color: color ?? defaultWarningColor?.call() ?? defaultColor?.call(),
     );
   }
 
@@ -75,7 +75,7 @@ class Alert extends StatelessWidget {
       notifyStatus: AlertNotifyStatus.error,
       position: position ?? defaultPosition,
       noDuplicate: noDuplicate,
-      color: color ?? defaultErrorColor ?? defaultColor,
+      color: color ?? defaultErrorColor?.call() ?? defaultColor?.call(),
     );
   }
 
@@ -92,7 +92,7 @@ class Alert extends StatelessWidget {
       notifyStatus: AlertNotifyStatus.info,
       position: position ?? defaultPosition,
       noDuplicate: noDuplicate,
-      color: color ?? defaultInfoColor ?? defaultColor,
+      color: color ?? defaultInfoColor?.call() ?? defaultColor?.call(),
     );
   }
 
