@@ -1,3 +1,7 @@
+## 0.8.4
+
+- Support latest [halo](https://pub.dev/packages/halo/versions)
+
 ## 0.8.3
 
 - Add default color properties to Alert class.
