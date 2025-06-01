@@ -10,10 +10,12 @@ void main() {
       darkTheme: ThemeData.dark(),
       home: _App(),
       builder: (context, child) {
-        return Stack(children: [
-          child!,
-          Alert.deploy(),
-        ]);
+        return Stack(
+          children: [
+            child!,
+            const Alert(),
+          ],
+        );
       },
     ),
   );
@@ -46,9 +48,9 @@ class _App extends StatelessWidget {
     return Scaffold(
       body: C(
         padding: EI.s(h: 24),
-        child: Co(
-          c: CAA.stretch,
-          m: MAA.end,
+        child: Column(
+          crossAxisAlignment: CAA.stretch,
+          mainAxisAlignment: MAA.end,
           children: [
             ElevatedButton(
               onPressed: _showWarning,

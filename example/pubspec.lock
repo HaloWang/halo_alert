@@ -79,17 +79,17 @@ packages:
     dependency: "direct main"
     description:
       name: halo
-      sha256: "123dc9c24c3840fb4349ef9bf1d5a0bfff85159b510fcfdbf5693c241ca9fc3e"
+      sha256: "7dbf90a318b7177de91ecb57b3ba46227479687c6962e5311d760f4ade16cd6b"
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.2"
+    version: "1.0.0"
   halo_alert:
     dependency: "direct main"
     description:
       path: ".."
       relative: true
     source: path
-    version: "0.8.2"
+    version: "0.8.4"
   leak_tracker:
     dependency: transitive
     description:
