@@ -107,19 +107,19 @@ class HUD extends ConsumerWidget {
                             color: isLight ? kW : kB,
                             borderRadius: _kBorderRadius.r,
                             border: Border.all(
-                              color: color.wo(0.33),
+                              color: color.q(0.33),
                               width: isLight ? _kLightBorderWidth : _kDarkBorderWidth,
                             ),
                             boxShadow: [
                               if (isLight)
                                 BoxShadow(
-                                  color: kB.wo(0.4),
+                                  color: kB.q(0.4),
                                   blurRadius: 4,
                                   offset: Offset(0, 1),
                                 ),
                             ],
                           ),
-                          child: Ro(
+                          child: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Icon(iconData, color: color),

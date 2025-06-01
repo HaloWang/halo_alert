@@ -1,3 +1,7 @@
+## 1.0.0
+
+- Update version to 1.0.0
+
 ## 0.8.4
 
 - Support latest [halo](https://pub.dev/packages/halo/versions)
